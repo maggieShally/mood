@@ -1,0 +1,14 @@
+/* components/tabbar.wxss */
+.tab-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40rpx;  
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+  color: #fff;
+  background: #02DF82;
+  z-index: 999;
+}

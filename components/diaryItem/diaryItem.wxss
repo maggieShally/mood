@@ -1,0 +1,71 @@
+/* components/diaryItem/diaryItem.wxss */
+.diary-item {
+  padding: 0 40rpx;
+  display: flex;
+  color: #666;
+}
+
+.diary-item .date {
+  padding: 35rpx 40rpx 0 0;
+  width: 150rpx;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+
+.diary-item .date::before {
+  content: '';
+  position: absolute;
+  top: 50rpx;
+  right: -20rpx;
+  border: 1px solid #ddd;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.diary-item .date .top {
+
+}
+.diary-item .date .bottom {
+  color: #ddd;
+  font-size: 24rpx;
+}
+
+.diary-item .content {
+  padding: 30rpx 40rpx 20rpx 65rpx;
+  width: 100%;  
+}
+
+.diary-item .content .detail {
+  padding: 20rpx;
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  position: relative;
+}
+
+.diary-item .content .detail .info {
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+
+.diary-item .content .detail::before {
+  content: '';
+  position: absolute;
+  border-color: transparent #fff transparent transparent; 
+  border-width: 30rpx;
+  border-style: solid;
+  top: 20rpx;
+  left: -55rpx;
+}
+
+.diary-item .content .detail .time {
+  position: absolute;
+  bottom: 20rpx;
+  left: 20rpx;
+  color: #ddd;
+}

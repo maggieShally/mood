@@ -1,0 +1,12 @@
+<!--components/tabbar.wxml-->
+<view class="tab-wrapper">
+  <view class="tab-left">
+    日历
+  </view>
+  <view class="tab-content">
+    全部
+  </view>
+  <view class="tab-rigth">
+    编辑
+  </view>
+</view>

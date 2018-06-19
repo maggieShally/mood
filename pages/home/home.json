@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tab-bar": "../../components/tabbar/tabbar",
+    "diary-list": "../../components/diaryList/diaryList"
+  }
+}

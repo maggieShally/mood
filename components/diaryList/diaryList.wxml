@@ -1,0 +1,10 @@
+<!--components/diaryList/diaryList.wxml-->
+<view wx:for="{{itemlist}}">
+  <diary-item 
+    content="{{item.content}}"
+    week="{{item.week}}"
+    day="{{item.day}}"
+    date="{{item.date}}"
+    time="{{item.time}}"
+  ></diary-item>
+</view>

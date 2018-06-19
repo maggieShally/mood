@@ -1,0 +1,18 @@
+<!--components/diaryItem/diaryItem.wxml-->
+<view class="diary-item">
+  <view class="date">
+    <view class="top">
+      <text>{{day}}</text>
+      <text>{{week}}</text>
+    </view>
+    <view class="bottom">
+      {{date}}
+    </view>
+  </view>
+  <view class="content">
+    <view class="detail">
+      <text class="info">{{content}}</text>
+      <text class="time">{{time}}</text>
+    </view>
+  </view>
+</view>
