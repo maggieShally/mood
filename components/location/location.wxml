@@ -1,0 +1,7 @@
+<!--components/location/location.wxml-->
+<view name="location">
+  <view class="location-title">
+    <text class="default-color ">你的当前位置：</text>
+    <text>{{locationInfo}}</text>
+  </view>
+</view>

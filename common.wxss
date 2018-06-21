@@ -1,0 +1,7 @@
+.default-bg {
+  background-color: #fff;
+}
+
+.default-color {
+  color: #16bb7f;
+}

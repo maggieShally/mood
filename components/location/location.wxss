@@ -1,0 +1,5 @@
+/* components/location/location.wxss */
+
+.location-title {
+  border-bottom: 1px solid #ddd;
+}

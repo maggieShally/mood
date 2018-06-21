@@ -2,8 +2,8 @@
 <view class="diary-item">
   <view class="date">
     <view class="top">
-      <text>{{day}}</text>
-      <text>{{week}}</text>
+      <text>{{day}} </text>
+      <text class="week">{{week}}</text>
     </view>
     <view class="bottom">
       {{date}}

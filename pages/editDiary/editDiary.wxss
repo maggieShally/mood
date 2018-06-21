@@ -1,0 +1,39 @@
+/* pages/editDiary/editDiary.wxss */
+
+.edit-wrapper {
+  padding: 30rpx;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.edit-content {
+  padding-bottom: 100rpx;
+  width: 100%;
+  min-height: 800rpx;
+  color: #666;
+  font-size: 32rpx;
+}
+
+.operate {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.operate-group {
+  padding: 15rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.operate-panel {
+  padding: 20rpx;
+}

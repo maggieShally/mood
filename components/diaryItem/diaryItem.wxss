@@ -3,12 +3,13 @@
   padding: 0 40rpx;
   display: flex;
   color: #666;
+  font-size: 24rpx;
 }
 
 .diary-item .date {
-  padding: 35rpx 40rpx 0 0;
+  padding: 45rpx 40rpx 0 0;
   width: 150rpx;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #d4d4d4;
   position: relative;
 }
 
@@ -16,8 +17,8 @@
   content: '';
   position: absolute;
   top: 50rpx;
-  right: -20rpx;
-  border: 1px solid #ddd;
+  right: -22rpx;
+  border: 1px solid #d4d4d4;
   width: 40rpx;
   height: 40rpx;
   border-radius: 50%;
@@ -25,10 +26,15 @@
 }
 
 .diary-item .date .top {
-
+  font-size: 28rpx;
 }
+
+.diary-item .date .top .week {
+  font-size: 24rpx;
+}
+
 .diary-item .date .bottom {
-  color: #ddd;
+  color: #bababa;
   font-size: 24rpx;
 }
 
@@ -40,9 +46,10 @@
 .diary-item .content .detail {
   padding: 20rpx;
   width: 100%;
-  height: 160rpx;
+  height: 140rpx;
   background: #fff;
   position: relative;
+  font-size: 28rpx;
 }
 
 .diary-item .content .detail .info {
@@ -67,5 +74,6 @@
   position: absolute;
   bottom: 20rpx;
   left: 20rpx;
-  color: #ddd;
+  color: #bababa;
+  font-size: 24rpx;
 }

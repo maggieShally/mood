@@ -1,0 +1,4 @@
+/* components/datePick/datePick.wxss */
+
+@import "../../common.wxss";
+

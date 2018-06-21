@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/editDiary/editDiary",
     "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"    
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,18 +14,28 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
+    "color": "#999",
+    "selectedColor": "#16bb7f",
+    "backgroundColor": "#fff",
+    "borderStyle": "#d2d2d2",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/editDiary/editDiary",
+        "text": "日记",
+        "iconPath": "/public/images/icon-diary.png",
+        "selectedIconPath": "/public/images/icon-diary-active.png"
       },
       {
         "pagePath": "pages/home/home",
-        "text": "日记"
+        "text": "首页",
+        "iconPath": "/public/images/icon-home.png",
+        "selectedIconPath": "/public/images/icon-home-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "/public/images/icon-account.png",
+        "selectedIconPath": "/public/images/icon-account-active.png"
       }
     ]
   }

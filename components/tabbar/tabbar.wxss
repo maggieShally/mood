@@ -1,14 +1,21 @@
 /* components/tabbar.wxss */
 .tab-wrapper {
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40rpx;  
+  padding: 20rpx;  
   display: flex;
-  justify-content: space-around;
-  font-size: 32rpx;
+  justify-content: space-between;
+  font-size: 24rpx;
   color: #fff;
-  background: #02DF82;
+  background: #16bb7f;
   z-index: 999;
+}
+
+
+.tab-wrapper .tab-content {
+  display: inline-flex;
+  align-items: center;
 }

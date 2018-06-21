@@ -1,0 +1,24 @@
+<!--pages/editDiary/editDiary.wxml-->
+<view class="edit-wrapper default-bg">
+  <textarea class="edit-content" auto-height="true" maxlength="-1">
+  </textarea>
+  <view class="operate">
+    <view class="operate-group">
+      <image bindtap="bindAction" data-attr="color" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-color.png"></image>
+      <image bindtap="bindAction" data-attr="clock" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-clock.png"></image>
+      <image bindtap="bindAction" data-attr="smile" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-smile.png"></image>
+      <image bindtap="bindAction" data-attr="pic" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-pic.png"></image>
+    </view>
+    <view class="operate-panel">
+      <view wx:if="{{active == 'clock'}}">
+        <date-pick></date-pick>
+      </view>
+      <block wx:if="{{active == 'smile'}}">
+        <location-block></location-block>
+      </block>
+      <block wx:if="{{active == 'pic'}}">
+        <picture-block></picture-block>
+      </block>
+    </view>
+  </view>
+</view>

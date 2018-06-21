@@ -1,12 +1,13 @@
 <!--components/tabbar.wxml-->
 <view class="tab-wrapper">
   <view class="tab-left">
-    日历
+    <image style="width: 40rpx;height: 40rpx;" src="/public/images/date.png"></image>
   </view>
   <view class="tab-content">
     全部
+    <image style="width: 40rpx;height: 40rpx;" src="/public/images/more_unfold.png"></image>
   </view>
   <view class="tab-rigth">
-    编辑
+    <image style="width: 40rpx;height: 40rpx;" src="/public/images/edit.png"></image>
   </view>
 </view>

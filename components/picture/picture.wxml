@@ -1,0 +1,7 @@
+<!--components/picture/picture.wxml-->
+<view>
+  <view wx:for="{{imgList}}" wx:key="{{index}}">
+    <image src="{{item}}"></image>
+  </view>
+  <button bindtap="bindPicture" type="primary" size="mini" plain="true">添加</button>
+</view>

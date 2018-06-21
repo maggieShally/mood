@@ -9,11 +9,22 @@
   box-sizing: border-box;
 } 
 
+.default-bg {
+  background-color: #fff;
+}
+
+.default-color {
+  color: #16bb7f;
+}
+
 page {
   background-color: #f0f0f0; 
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
 }
 
 .wrapper {
-  padding: 120rpx 0 0 0;
+  padding: 80rpx 0 0 0;
   font-size: 32rpx;
 }
