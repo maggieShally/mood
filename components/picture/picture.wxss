@@ -1,1 +1,25 @@
 /* components/picture/picture.wxss */
+
+.picture-list {
+  display:flex;
+  flex-wrap:wrap;
+  height: 600rpx;
+  max-height: 600rpx;
+  overflow: auto;
+}
+
+.picture-item {
+  margin:0 35rpx 20rpx 0;
+  width: 200rpx;
+  height: 300rpx;
+  overflow:hidden;
+}
+
+.picture-item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.picture-item image {
+  width: 100%;
+  height: 100%;
+}
