@@ -2,6 +2,7 @@
   "usingComponents": {
     "date-pick": "../../components/datePick/datePick",
     "location-block": "../../components/location/location",
-    "picture-block": "../../components/picture/picture"
+    "picture-block": "../../components/picture/picture",
+    "font-block": "../../components/fontStyle/fontStyle"
   }
 }

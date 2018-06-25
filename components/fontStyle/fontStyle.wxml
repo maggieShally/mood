@@ -1,0 +1,16 @@
+<!--components/fontStyle/fontStyle.wxml-->
+<view class="edit-sec">
+  <text>字体大小</text>
+  <slider bindchange="getFontSize" min="24" max="72" block-size="16" block-color="#16bb7f"></slider>
+  <view>
+    <text>字体颜色</text>
+    <view class="active-color" style="background-color:{{activeColor}}"></view>
+  </view>
+  <view class="color-sec">
+    <view wx:for="{{colorList}}"
+    wx:key="{{index}}"
+    data-currColor="{{item}}"
+    bindtap='getCurrColor'
+    class="{{currActive == item ? 'color-item active' :'color-item'}}"        style="background-color:{{item}}"></view>
+  </view>
+</view>

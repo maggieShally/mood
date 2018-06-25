@@ -6,16 +6,25 @@ Page({
    */
   data: {
     active: '',
+    activeColor: '#000',
+    activeFontSize: '24rpx',
   },
   bindAction: function (e) {
-    console.log(e.target.dataset.attr)
     this.setData({
       active: e.target.dataset.attr,
     })
   },
+  getCurrColor: function (detailsObj) {
+    this.setData({
+      activeColor: detailsObj.detail,
+    })
+  },
+  getFontSize: function(detailsObj) {
+    this.setData({
+      activeFontSize: detailsObj.detail+'rpx',
+    })
+  },
   methods:{
-   
-
   },
   /**
    * 生命周期函数--监听页面加载

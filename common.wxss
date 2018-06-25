@@ -5,3 +5,7 @@
 .default-color {
   color: #16bb7f;
 }
+
+.edit-sec {
+  height: 400rpx;
+}

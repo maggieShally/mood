@@ -1,10 +1,10 @@
 <!--pages/editDiary/editDiary.wxml-->
 <view class="edit-wrapper default-bg">
-  <textarea class="edit-content" auto-height="true" maxlength="-1">
+  <textarea class="edit-content" auto-height="true" maxlength="-1" style="color:{{activeColor}};font-size:{{activeFontSize}}">
   </textarea>
   <view class="operate">
     <view class="operate-group">
-      <image bindtap="bindAction" data-attr="color" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-color.png"></image>
+      <image bindtap="bindAction" data-attr="font" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-color.png"></image>
       <image bindtap="bindAction" data-attr="clock" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-clock.png"></image>
       <image bindtap="bindAction" data-attr="smile" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-smile.png"></image>
       <image bindtap="bindAction" data-attr="pic" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-pic.png"></image>
@@ -18,6 +18,13 @@
       </block>
       <block wx:if="{{active == 'pic'}}">
         <picture-block></picture-block>
+      </block>
+      <block wx:if="{{active == 'font'}}">
+        <font-block 
+        activeColor="{{activeColor}}"
+        bind:getCurrColor="getCurrColor"
+        bind:getFontSize="getFontSize"
+        ></font-block>
       </block>
     </view>
   </view>
