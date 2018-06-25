@@ -23,6 +23,9 @@
   width: 100%;
   font-size: 28rpx;
   color: #666;
+  background:#fff;
+  z-index:999;
+
 }
 
 .operate-group {
