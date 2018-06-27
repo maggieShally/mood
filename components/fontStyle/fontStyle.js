@@ -7,7 +7,10 @@ Component({
     activeColor: {
       type: String,
       value: '#000',
-    }
+    },
+    activeFontSize: {
+      type: String,
+    },
   },
 
   /**

@@ -1,5 +1,34 @@
 /* components/location/location.wxss */
 
+@import '../../common.wxss';
+
 .location-title {
+  padding: 20rpx 0 ;
   border-bottom: 1px solid #ddd;
+}
+
+.weather-sec {
+  padding: 20rpx 0;
+}
+
+.weather-list {
+  margin: 20rpx 0 0 0;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.weather-item {
+  margin: 0 80rpx 40rpx 0;
+  box-sizing: border-box;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.weather-item:nth-child(5n+5) {
+  margin-right: 0;
+}
+
+.weather-item image {
+  width: 100%;
+  height: 100%;
 }

@@ -1,40 +1,30 @@
 // components/location/location.js
-var bmap = require('../../libs/bmap-wx.js');
 
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    locationInfo: {
+      type: String,
+      value: '',
+    },
   },
   
   data: {
-    locationInfo: ''
+    activeWeather:'',
+    weatherList: ['sunny', 'cloudy', 'overcast', 'fog', 'smallRain', 'bigRain','rain', 'thunderstorm','snow', 'moon']
   },
   
-  attached: function() {
-    const that = this;
-    let BMap = new bmap.BMapWX({
-      ak: 'auFDdbUXFHFArkF7R55yxjfXLmclV5Aj'
-    });
-    let fail = function (data) {
-      console.log(data)
-    };
-    let success = function (data) {
-      const wxMarkerData = data.wxMarkerData;
-      console.log(wxMarkerData);
-      that.setData({
-        locationInfo: wxMarkerData[0].address
-      });
-    }
-    BMap.regeocoding({
-      fail: fail,
-      success: success
-    }); 
-  },
   
   methods: {
+    getWeather: function (e) {
+      const weather = e.currentTarget.dataset.weather;
+      this.setData({
+        activeWeather: weather
+      });
+      this.triggerEvent('getWeather', weather)
+    },
 
   }
 })

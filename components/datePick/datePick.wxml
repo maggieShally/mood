@@ -1,5 +1,5 @@
 <!--components/datePick/datePick.wxml-->
-<view name="picker">
+<view class="edit-sec">
   <view> 
     <text class="default-color">当前时间： </text>  
     <text>{{currentDate}}</text>
@@ -7,7 +7,7 @@
   <picker mode="date" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
     <view class="picker">
       <text class="default-color">当前选择： </text>  
-      <text>{{choseDate}}</text>
+      <text>{{chooseDate}}</text>
     </view>
   </picker>
 </view>

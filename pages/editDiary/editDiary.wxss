@@ -4,11 +4,25 @@
   padding: 30rpx;
   width: 100%;
   min-height: 100%;
+  font-size: 28rpx;
   position: relative;
   box-sizing: border-box;
 }
 
+.title-sec {
+  display: flex;
+  padding:20rpx 0;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom:1px solid #ddd;
+}
+
+.title-sec text {
+  flex: 80%;
+}
+
 .edit-content {
+  margin: 40rpx 0 0 0;
   padding-bottom: 100rpx;
   width: 100%;
   min-height: 800rpx;
@@ -35,9 +49,4 @@
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
-}
-
-.operate-panel {
-  padding: 20rpx;
-  /* height: 500rpx; */
 }

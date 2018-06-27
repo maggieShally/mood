@@ -1,5 +1,5 @@
 <!--components/picture/picture.wxml-->
-<view>
+<view class="edit-sec">
   <view class="picture-list">
     <view class="picture-item" wx:for="{{imgList}}" wx:key="{{index}}">
       <image src="{{item}}"></image>

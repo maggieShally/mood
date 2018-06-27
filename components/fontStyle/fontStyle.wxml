@@ -1,7 +1,7 @@
 <!--components/fontStyle/fontStyle.wxml-->
 <view class="edit-sec">
   <text>字体大小</text>
-  <slider bindchange="getFontSize" min="24" max="72" block-size="16" block-color="#16bb7f"></slider>
+  <slider bindchange="getFontSize" value="{{activeFontSize}}" min="24" max="72" block-size="16" block-color="#16bb7f"></slider>
   <view>
     <text>字体颜色</text>
     <view class="active-color" style="background-color:{{activeColor}}"></view>

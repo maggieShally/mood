@@ -1,7 +1,18 @@
 <!--components/location/location.wxml-->
-<view name="location">
+<view class="edit-sec location">
   <view class="location-title">
-    <text class="default-color ">你的当前位置：</text>
+    <text class="default-color">你的当前位置：</text>
     <text>{{locationInfo}}</text>
+  </view>
+  <view class="weather-sec">
+    <text class="default-color">你那里下雪了吗？</text>
+    <view class="weather-list">
+      <view class="weather-item" wx:for="{{weatherList}}" wx:key="{{index}}"
+        bindtap="getWeather"
+        data-weather="{{item}}"
+      >
+        <image src="/public/images/weather/{{activeWeather == item ? 'icon-'+item+'-active' : 'icon-'+item}}.png"></image>
+      </view>
+    </view>
   </view>
 </view>

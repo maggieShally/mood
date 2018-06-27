@@ -7,5 +7,7 @@
 }
 
 .edit-sec {
+  padding: 20rpx;
   height: 400rpx;
+  box-sizing: border-box;
 }

@@ -32,7 +32,7 @@ Component({
           that.setData({
               imgList: [...that.data.imgList, ...tempFilePaths]
           },()=>{
-            // console.log(that.data.imgList);
+            that.triggerEvent('getPicture',that.data.imgList);
           })
         }
       })

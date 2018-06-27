@@ -1,5 +1,7 @@
 /* components/picture/picture.wxss */
 
+@import '../../common.wxss';
+
 .picture-list {
   width: 100%;
   height: 300rpx;

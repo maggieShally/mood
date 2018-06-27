@@ -1,26 +1,31 @@
 <!--pages/editDiary/editDiary.wxml-->
 <view class="edit-wrapper default-bg">
-  <textarea class="edit-content" auto-height="true" maxlength="-1" style="color:{{activeColor}};font-size:{{activeFontSize}}">
+  <view class="title-sec">
+    <text>今天你想要写些什么呢？</text>
+    <button type="primary" size="mini" plain="true" bindtap="submitHandler">保存</button>
+  </view>
+  <textarea bindfocus="bindFocus" bindconfirm="getEditContent" bindinput="getEditContent" class="edit-content" auto-height="true" maxlength="-1" style="color:{{activeColor}};font-size:{{activeFontSize}}rpx">
   </textarea>
   <view class="operate">
     <view class="operate-group">
       <image bindtap="bindAction" data-attr="font" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-color.png"></image>
       <image bindtap="bindAction" data-attr="clock" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-clock.png"></image>
-      <image bindtap="bindAction" data-attr="smile" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-smile.png"></image>
+      <image bindtap="bindAction" data-attr="smile" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-location.png"></image>
       <image bindtap="bindAction" data-attr="pic" style="width: 60rpx; height: 60rpx;" src="/public/images/icon-pic.png"></image>
     </view>
     <view class="operate-panel">
       <view wx:if="{{active == 'clock'}}">
-        <date-pick></date-pick>
+        <date-pick bind:getChooseDate="getChooseDate"></date-pick>
       </view>
       <block wx:if="{{active == 'smile'}}">
-        <location-block></location-block>
+        <location-block bind:getWeather="getWeather" locationInfo="{{locationInfo}}"></location-block>
       </block>
       <block wx:if="{{active == 'pic'}}">
-        <picture-block></picture-block>
+        <picture-block bind:getPicture="getPicture"></picture-block>
       </block>
       <block wx:if="{{active == 'font'}}">
         <font-block 
+        activeFontSize="{{activeFontSize}}"
         activeColor="{{activeColor}}"
         bind:getCurrColor="getCurrColor"
         bind:getFontSize="getFontSize"
