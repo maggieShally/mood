@@ -23,9 +23,8 @@
 
 .edit-content {
   margin: 40rpx 0 0 0;
-  padding-bottom: 100rpx;
   width: 100%;
-  min-height: 800rpx;
+  height: 900rpx; 
   color: #666;
   font-size: 32rpx;
 }
@@ -38,7 +37,7 @@
   font-size: 28rpx;
   color: #666;
   background:#fff;
-  z-index:999;
+  z-index:9999;
 
 }
 

@@ -82,7 +82,7 @@ Page({
 
   redirectDetail: function(obj){
     const currId = obj.detail;
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/diaryDetail/diaryDetail?id='+currId
     })
   },

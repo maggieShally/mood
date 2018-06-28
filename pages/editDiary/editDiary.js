@@ -13,15 +13,16 @@ Page({
     active: '',
     activeColor: '#000',
     activeFontSize: '28',
-    editDetails: {}
+    editDetails: {},
+    minHeight: '800rpx',
   },
   bindAction: function (e) {
     this.setData({
       active: e.target.dataset.attr,
+      minHeight: '400rpx'
     })
   },
   getCurrColor: function (detailsObj) {
-   
     let self = this;
     this.setData({
       activeColor: detailsObj.detail,
@@ -70,10 +71,15 @@ Page({
       }
     })
   },
-
+  bindBlur: function(){
+    this.setData({
+     
+    })
+  },
   bindFocus: function() {
     this.setData({
       active: '',
+      minHeight: '800rpx'
     })
   },
   getEditContent: function(event){
