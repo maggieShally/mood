@@ -1,0 +1,40 @@
+<!--pages/mine/mine.wxml-->
+<view class="wrapper mine-wrapper">
+  <view class="head-sec" style="background:url(/public/images/mine-bg.jpg) no-repeat center center #fff; background-size: 100%">
+    <view>
+      <image class="head-img" src="{{userInfo.avatarUrl}}"></image>
+      <view>{{userInfo.nickName}}</view>
+      <view>欢迎你来到点滴日记</view>
+    </view>
+  </view>
+  <view class="mine-operate">
+    <view class="media">
+      <view class="media-content">
+        <text>你已经记录20篇心情了哦~~加油</text>
+      </view>
+    </view>   
+
+    <view class="media">
+      <view class="media-content">
+        <text>兴趣：</text>
+        <text>瑜伽 健身 听歌</text>
+      </view>
+      <view class="media-content">
+        <text>标签：</text>
+        <text>霸气女王 熟女御姐 端庄大方 积极小可爱</text>
+      </view>
+    </view>
+    <view class="media">
+      <view class="media-content">
+        <text>地址：</text>
+        <text>广东省 深圳市 宝安区</text>
+      </view>
+    </view>   
+    <view class="media">
+      <view class="media-content">
+        <text>回忆这东西毫无意义，我不是已经证明了吗</text>
+      </view>
+    </view>
+   
+  </view>
+</view>

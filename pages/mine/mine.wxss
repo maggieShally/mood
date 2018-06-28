@@ -1,0 +1,43 @@
+/* pages/mine/mine.wxss */
+
+.mine-wrapper {
+  padding: 0;
+}
+
+.head-sec {
+  height: 400rpx;
+  background-color: #fff;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFF;
+} 
+
+.head-img {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) */
+}
+
+.media {  
+  margin-bottom: 30rpx;
+  padding: 0 0 0 20rpx;
+  background: #fff;
+}
+
+.media .media-content{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.media .media-content:last-child {
+  border-bottom: none;
+}

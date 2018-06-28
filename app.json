@@ -1,16 +1,16 @@
 {
   "pages": [
+    "pages/mine/mine",
+    "pages/home/home",        
     "pages/editDiary/editDiary",
-    "pages/home/home",
     "pages/logs/logs",
-    
     "pages/index/index",
     "pages/diaryDetail/diaryDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#16bb7f",
-    "navigationBarTitleText": "心情日记",
+    "navigationBarTitleText": "点滴日记",
     "navigationBarTextStyle": "#fff",
     "backgroundColor": "#eeeeee",
     "enablePullDownRefresh": true
@@ -34,8 +34,8 @@
         "selectedIconPath": "/public/images/icon-home-active.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
         "iconPath": "/public/images/icon-account.png",
         "selectedIconPath": "/public/images/icon-account-active.png"
       }
