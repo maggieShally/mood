@@ -1,6 +1,5 @@
 /* components/diaryItem/diaryItem.wxss */
 .diary-item {
-  padding: 0 40rpx;
   display: flex;
   color: #666;
   font-size: 24rpx;

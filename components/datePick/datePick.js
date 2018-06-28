@@ -7,7 +7,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    chooseDate: {
+      type: String
+    }
   },
 
   /**
@@ -15,7 +17,6 @@ Component({
    */
   data: {
     currentDate: '',
-    chooseDate: '',
   },
   attached: function(){
 
@@ -30,9 +31,6 @@ Component({
   methods: {
     bindDateChange: function(e){
       const chooseDate = e.detail.value;
-      this.setData({
-        chooseDate
-      })
       this.triggerEvent('getChooseDate', chooseDate)
     }
   }

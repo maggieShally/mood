@@ -1,0 +1,27 @@
+<!--pages/diaryDetail/diaryDetail.wxml-->
+<view class="wrapper diaryDetail-wrapper" bind:touchmove="handletouchmove" bindtouchstart = "handletouchtart" >
+  <!-- <view class="operate-sec">
+    <image class="icon-operate"src="/public/images/icon-delet.png"></image>
+    <image class="icon-operate"src="/public/images/icon-edit.png"></image>
+  </view> -->
+  <view class="date-sec">
+    <text class="date">{{diaryDetails.days}}</text>
+    <text class="time">{{diaryDetails.times}}</text>
+    <text class="week">{{diaryDetails.week}}</text>
+  </view>
+  <view class="address-sec">
+    <image class="icon-location"src="/public/images/icon-address.png"></image>
+    <text>{{diaryDetails.location}}</text>
+  </view>
+  <view>
+    <text style="font-size:{{diaryDetails.fontSize}}; color: {{diaryDetails.color}}; ">{{diaryDetails.content}}</text>
+  </view>
+  <!-- <view class="pagenation-sec default-color">
+     <image class="prev" src="/public/images/icon-prev.png"></image>
+     <image class="next"src="/public/images/icon-next.png"></image>
+  </view> -->
+  <view class="operate-sec">
+    <text class="operate-item">编辑</text>
+    <text class="operate-item">删除</text>
+  </view>
+</view>

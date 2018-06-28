@@ -10,19 +10,22 @@ Page({
       week: "周二",
       date: '2018.06',
       day: '19',
-      time: '22:44'
+      time: '22:44',
+      id: '123'
     }, {
       content: "111111111111111111111",
       week: "周二",
       date: '2018.06',
       day: '19',
-      time: '22:44'
+      time: '22:44',
+      id: '124'
       }, {
         content: "2222222222222222222",
         week: "周二",
         date: '2018.06',
         day: '19',
-        time: '22:44'
+        time: '22:44',
+        id: '125'
       }]
   },
 
@@ -77,6 +80,12 @@ Page({
     }, 2000)
   },
 
+  redirectDetail: function(obj){
+    const currId = obj.detail;
+    wx.redirectTo({
+      url: '/pages/diaryDetail/diaryDetail?id='+currId
+    })
+  },
   /**
    * 页面上拉触底事件的处理函数
    */

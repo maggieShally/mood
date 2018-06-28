@@ -1,5 +1,6 @@
 .default-bg {
   background-color: #fff;
+  font-size: 28rpx;
 }
 
 .default-color {

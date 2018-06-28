@@ -1,0 +1,73 @@
+/* pages/diaryDetail/diaryDetail.wxss */
+@import '../../common.wxss';
+
+.diaryDetail-wrapper {
+  padding-bottom: 100rpx;
+  min-height: 100%;
+}
+
+
+.date-sec {
+  margin: 0 0 20rpx 0;
+}
+
+.date-sec .time {
+  margin: 0 20rpx;
+}
+
+.date-sec .date {
+  font-size: 32rpx;
+}
+
+.address-sec {
+  margin: 30rpx 0;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.icon-location {
+  display: inline-block;
+  margin: 0 20rpx 0 0;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+
+.pagenation-sec {
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.pagenation-sec .prev,
+.pagenation-sec .next {
+  margin: 0 50rpx;
+  width: 70rpx;
+  height: 60rpx;
+}
+
+
+.operate-sec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.operate-sec .operate-item {
+  flex: 1;
+  padding: 20rpx;
+  color: #fff;
+  background-color: #16bb7f;
+}
+
+.operate-sec .operate-item:first-child {
+  border-right: 1px solid #ddd;
+}

@@ -1,1 +1,5 @@
 /* pages/home/home.wxss */
+
+.home-wrapper {
+  padding: 80rpx 40rpx;
+}

@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<view class="wrapper">
-  <tab-bar></tab-bar>
-  <diary-list itemlist="{{diaryList}}"></diary-list>
+<view class="home-wrapper">
+  <tab-bar></tab-bar>  
+  <diary-list itemlist="{{diaryList}}" bind:redirectDetail="redirectDetail"></diary-list>
 </view>

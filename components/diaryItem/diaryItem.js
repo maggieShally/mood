@@ -4,21 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    content: {
-      type: 'Array'
+    item: {
+      type: 'Object'
     },
-    date: {
-      type: 'Array'
-    },
-    time: {
-      type: 'Array'
-    },
-    day: {
-      type: 'Array'
-    },
-    week: {
-      type: 'Array'
-    }
   },
 
   /**

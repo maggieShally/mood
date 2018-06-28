@@ -1,5 +1,5 @@
 <!--pages/editDiary/editDiary.wxml-->
-<view class="edit-wrapper default-bg">
+<view class="wrapper edit-wrapper default-bg">
   <view class="title-sec">
     <text>今天你想要写些什么呢？</text>
     <button type="primary" size="mini" plain="true" bindtap="submitHandler">保存</button>
@@ -15,7 +15,7 @@
     </view>
     <view class="operate-panel">
       <view wx:if="{{active == 'clock'}}">
-        <date-pick bind:getChooseDate="getChooseDate"></date-pick>
+        <date-pick bind:getChooseDate="getChooseDate" chooseDate="{{chooseDate}}"></date-pick>
       </view>
       <block wx:if="{{active == 'smile'}}">
         <location-block bind:getWeather="getWeather" locationInfo="{{locationInfo}}"></location-block>

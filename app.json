@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/editDiary/editDiary",
     "pages/home/home",
+    "pages/logs/logs",
+    "pages/editDiary/editDiary",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/diaryDetail/diaryDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

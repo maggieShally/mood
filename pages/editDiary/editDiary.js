@@ -63,6 +63,7 @@ Page({
   getChooseDate: function (detailsObj) {
     let self = this;
     this.setData({
+      chooseDate: detailsObj.detail,
       editDetails: {
         ...this.data.editDetails,
         chooseDate: detailsObj.detail,
@@ -91,10 +92,10 @@ Page({
       location: data.locationInfo,
       chooseDate: data.chooseDate ? data.chooseDate : common.formatTime(new Date())
     }
-    console.log(formData);
-  },
-  methods:{
-
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
+    console.log(JSON.stringify(formData));
   },
   /**
    * 生命周期函数--监听页面加载

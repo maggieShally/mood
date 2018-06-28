@@ -20,6 +20,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    redirectDetail: function(event) {
+      const currId = event.currentTarget.id;
+      this.triggerEvent('redirectDetail', currId);
+    }
   }
 })
