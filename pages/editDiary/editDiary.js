@@ -15,6 +15,19 @@ Page({
     activeFontSize: '28',
     editDetails: {},
     minHeight: '800rpx',
+    textValue: '',
+  },
+  initData: function() {
+    this.setData({
+      locationInfo: '',
+      chooseDate: '',
+      active: '',
+      activeColor: '#000',
+      activeFontSize: '28',
+      editDetails: {},
+      minHeight: '800rpx',
+      textValue:'',
+    })
   },
   bindAction: function (e) {
     this.setData({
@@ -85,6 +98,7 @@ Page({
   getEditContent: function(event){
     let self = this;
     this.setData({
+      textValue: event.detail.value,
       editDetails: {
         ...this.data.editDetails,
         content: event.detail.value
@@ -98,10 +112,14 @@ Page({
       location: data.locationInfo,
       chooseDate: data.chooseDate ? data.chooseDate : common.formatTime(new Date())
     }
+
+    this.initData();
     wx.switchTab({
       url: '/pages/home/home',
     })
-    console.log(JSON.stringify(formData));
+
+
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -145,14 +163,15 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    console.log('onHide')
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    console.log('onUnload')
   },
 
   /**

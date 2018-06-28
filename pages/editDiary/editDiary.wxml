@@ -4,7 +4,7 @@
     <text>今天你想要写些什么呢？</text>
     <button type="primary" size="mini" plain="true" bindtap="submitHandler">保存</button>
   </view>
-  <textarea bindblur="bindBlur" bindfocus="bindFocus" bindconfirm="getEditContent" bindinput="getEditContent" class="edit-content" maxlength="-1" style="color:{{activeColor}};font-size:{{activeFontSize}}rpx; height: {{minHeight}}">
+  <textarea value="{{textValue}}" bindblur="bindBlur" bindfocus="bindFocus" bindconfirm="getEditContent" bindinput="getEditContent" class="edit-content" maxlength="-1" style="color:{{activeColor}};font-size:{{activeFontSize}}rpx; height: {{minHeight}}">
   </textarea>
   <view class="operate">
     <view class="operate-group">
