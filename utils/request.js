@@ -3,7 +3,7 @@
 const request = function (url, option) {
   return new Promise((resolve, reject) => {
     return wx.request({
-      url: url,
+      url: `http://localhost:3002${url}`,
       dataType: 'json',
       responseType: 'text',
       ...option,
@@ -14,7 +14,7 @@ const request = function (url, option) {
       success: function (res) {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           if (res.data.meta.code === '00000') {
-            resolve(res.data)
+            resolve(res.data.data)
           } else {
             reject(res.data.meta)
           }

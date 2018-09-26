@@ -15,8 +15,25 @@ const formatNumber = n => {
 }
 
 
+const formatDiaryDate =  function (date) {
+  const weeks = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
+  const currDate = new Date(date);
+  const year = currDate.getFullYear();
+  const month = currDate.getMonth() + 1;
+  const day = currDate.getDate();
+  const week = currDate.getDay();
+  const hours = currDate.getHours();
+  const minutes = currDate.getMinutes();
+  return {
+    week: weeks[week],
+    day,
+    date: `${year}.${month > 10 ? month : '0'+ month}`,
+    time: `${hours}:${minutes > 10 ? minutes : '0' + minutes}`,
+  }
+};
 
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatDiaryDate,
 }
