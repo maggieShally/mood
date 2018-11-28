@@ -44,5 +44,16 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  getAddress: function () {
+    console.log(12);
+    wx.chooseAddress({
+      success: function (res) {
+        console.log(JSON.stringify(res))
+      },
+      fail: function (err) {
+        console.log(JSON.stringify(err))
+      }
+    });
   }
 })

@@ -1,0 +1,4 @@
+<!--pages/savePic/index.html.wxml-->
+<button bindtap="saveImgs">保存图片</button>
+<button bindtap="record">开始录音</button>
+<canvas class="canvas" canvas-id="weixinCode" style="width: 100%; height: 100%"></canvas>

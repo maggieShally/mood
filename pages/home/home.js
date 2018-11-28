@@ -15,6 +15,23 @@ Page({
     pageNo: 0,
     pageSize: 10,
   },
+  onShow: function() {
+    wx.login({
+      success: res => {
+        console.log(res)
+        const params = {
+          appID:'wxffcd8beefa67cdb3',
+          secret:'f9751a22f9281020dadca28d7d2d09c0',
+          code: res.code
+        }
+        if(res.code) {
+          ajaxPost('/api/commom/getToken', params).then(res => {
+            console.log(res)
+          })
+        }
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

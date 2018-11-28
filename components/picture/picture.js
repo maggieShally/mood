@@ -27,6 +27,22 @@ Component({
         success: function (res) {
           // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
           var tempFilePaths = res.tempFilePaths
+
+          wx.uploadFile({
+            url: 'http://up.qiniu.com/', //仅为示例，非真实的接口地址
+            filePath: tempFilePaths[0],
+            name: 'file',
+            formData: {
+              key: `giftCoverTest_${new Date().getTime()}.jpg`,
+              token: "c6x0I_KKeog34WZzUNtE73f3h96Jt6nUpcy37TPw:jxN39hq8aRpv_b8lP8X8SjkF98o=:eyJzY29wZSI6InRpcmFtaXN1LXFhIiwiZGVhZGxpbmUiOjE1Mzk4NDUxOTJ9",
+            },
+            success(res) {
+              const data = res.data
+              //do something
+            }
+          })
+
+
           console.log(tempFilePaths);
           let imgList = 
           that.setData({

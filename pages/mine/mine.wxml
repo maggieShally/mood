@@ -35,6 +35,7 @@
         <text>回忆这东西毫无意义，我不是已经证明了吗</text>
       </view>
     </view>
-   
+   <button open-type="contact">进入客服会话</button>
+    <button bindtap="getAddress">地址</button>
   </view>
 </view>
