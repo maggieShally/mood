@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/mine/mine",
-    "pages/home/home",        
+    "pages/home/home",
     "pages/editDiary/editDiary",
+    "pages/savePic/index.html",
+    "pages/mine/mine",
+  
     "pages/logs/logs",
     "pages/index/index",
     "pages/diaryDetail/diaryDetail"

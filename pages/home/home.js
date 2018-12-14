@@ -1,83 +1,74 @@
 // pages/home/home.js
+
+import { ajaxPost, ajaxGet } from '../../utils/request.js'
+
+import { formatDiaryDate } from '../../utils/util' 
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    diaryList: [{
-      content: "日记日记日记日记日记日记日记日记日记日记日记日记",
-      week: "周二",
-      date: '2018.06',
-      day: '19',
-      time: '22:44',
-      id: '123'
-    }, {
-      content: "111111111111111111111",
-      week: "周二",
-      date: '2018.06',
-      day: '19',
-      time: '22:44',
-      id: '124'
-      }, {
-        content: "2222222222222222222",
-        week: "周二",
-        date: '2018.06',
-        day: '19',
-        time: '22:44',
-        id: '125'
-      }]
+    diaryList: [],
+    totalPage: 0,
+    pageNo: 0,
+    pageSize: 10,
+  },
+  onShow: function() {
+    wx.login({
+      success: res => {
+        console.log(res)
+        const params = {
+          appID:'wxffcd8beefa67cdb3',
+          secret:'f9751a22f9281020dadca28d7d2d09c0',
+          code: res.code
+        }
+        if(res.code) {
+          ajaxPost('/api/commom/getToken', params).then(res => {
+            console.log(res)
+          })
+        }
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.getDiaryList();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+  getDiaryList: function () {
+    const { pageNo, pageSize, diaryList } = this.data;
+    ajaxPost('/api/diary/getDiary', { pageNo: pageNo + 1, pageSize }).then(res => {
+      this.setData({
+        diaryList: diaryList.concat(res.itemList).map(item => {
+          return {
+            ...item,
+            ...formatDiaryDate(item.date),
+          }
+        }),
+        totalPage: Math.ceil(res.totalRecord / pageSize),
+        pageNo: res.pageNo
+      })
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-    this.setData({
-      diaryList: [...this.data.diaryList, ...this.data.diaryList]
-    },() => {
-      console.log(this.data.diaryList);
     })
+  },
+  
+  onPullDownRefresh: function () {
+    const { totalPage, pageNo } = this.data;
+
+    if(totalPage <= pageNo) {
+      wx.stopPullDownRefresh();
+      return false;
+    }
+
+    this.getDiaryList();
     setTimeout(function(){
-      wx.stopPullDownRefresh()
-      console.log('end')
-    }, 2000)
+      wx.stopPullDownRefresh();
+    }, 1500)
   },
 
   redirectDetail: function(obj){

@@ -5,8 +5,8 @@
     <image class="icon-operate"src="/public/images/icon-edit.png"></image>
   </view> -->
   <view class="date-sec">
-    <text class="date">{{diaryDetails.days}}</text>
-    <text class="time">{{diaryDetails.times}}</text>
+    <text class="date">{{diaryDetails.day}}</text>
+    <text class="time">{{diaryDetails.time}}</text>
     <text class="week">{{diaryDetails.week}}</text>
   </view>
   <view class="address-sec">
@@ -14,12 +14,8 @@
     <text>{{diaryDetails.location}}</text>
   </view>
   <view>
-    <text style="font-size:{{diaryDetails.fontSize}}; color: {{diaryDetails.color}}; ">{{diaryDetails.content}}</text>
+    <text style="font-size:{{diaryDetails.fontSize+'rpx'}}; color: {{diaryDetails.color}}; ">{{diaryDetails.content}}</text>
   </view>
-  <!-- <view class="pagenation-sec default-color">
-     <image class="prev" src="/public/images/icon-prev.png"></image>
-     <image class="next"src="/public/images/icon-next.png"></image>
-  </view> -->
   <view class="operate-sec">
     <text class="operate-item">编辑</text>
     <text class="operate-item">删除</text>

@@ -1,6 +1,7 @@
 // pages/editDiary/editDiary.js
 var bmap = require('../../libs/bmap-wx.js');
 var common = require('../../utils/util.js');
+import { ajaxPost, ajaxGet } from '../../utils/request.js'
 
 Page({
 
@@ -110,13 +111,17 @@ Page({
     const formData= {
       ...data.editDetails,
       location: data.locationInfo,
-      chooseDate: data.chooseDate ? data.chooseDate : common.formatTime(new Date())
+      date: data.chooseDate ? data.chooseDate : common.formatTime(new Date())
     }
 
-    this.initData();
-    wx.switchTab({
-      url: '/pages/home/home',
-    })
+    ajaxPost('/api/diary/submitDiary', formData)
+
+    console.log(formData);
+
+    // this.initData();
+    // wx.switchTab({
+    //   url: '/pages/home/home',
+    // })
 
 
 
