@@ -14,10 +14,10 @@
     <text>{{diaryDetails.location}}</text>
   </view>
   <view>
-    <text style="font-size:{{diaryDetails.fontSize+'rpx'}}; color: {{diaryDetails.color}}; ">{{diaryDetails.content}}</text>
+    <rich-text class="rich-text" nodes="{{diaryDetails.content}}"></rich-text>
   </view>
   <view class="operate-sec">
-    <text class="operate-item">编辑</text>
-    <text class="operate-item">删除</text>
+    <text class="operate-item" bindtap="handleEdit">编辑</text>
+    <text class="operate-item" bindtap="handleDel">删除</text>
   </view>
 </view>

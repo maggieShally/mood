@@ -1,8 +1,7 @@
 // pages/home/home.js
 
-import { ajaxPost, ajaxGet } from '../../utils/request.js'
-
 import { formatDiaryDate } from '../../utils/util' 
+import  { getDetailsList, getToken } from '../../services/index'
 
 Page({
 
@@ -16,35 +15,61 @@ Page({
     pageSize: 10,
   },
   onShow: function() {
-    wx.login({
-      success: res => {
-        console.log(res)
-        const params = {
-          appID:'wxffcd8beefa67cdb3',
-          secret:'f9751a22f9281020dadca28d7d2d09c0',
-          code: res.code
-        }
-        if(res.code) {
-          ajaxPost('/api/commom/getToken', params).then(res => {
-            console.log(res)
-          })
-        }
-      }
-    })
+    this.getDiaryList({
+      pageNo: 1
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getDiaryList();
+    wx.getSetting({
+      success(res) {
+        console.log(res)
+        if (!res.authSetting['scope.record']) {
+          wx.authorize({
+            scope: 'scope.record',
+            success () {
+              // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+              wx.startRecord()
+            }
+          })
+        }
+      }
+    })
+
+    wx.getUserInfo({
+      success: function(res) {
+      console.log(res)
+      },
+      fail: function(err) {
+        console.log(err)
+      }
+    })
+
+    // wx.login({
+    //   success: res => {
+    //     console.log(res)
+    //     // const params = {
+    //     //   appID:'wxffcd8beefa67cdb3',
+    //     //   secret:'f9751a22f9281020dadca28d7d2d09c0',
+    //     //   js_code: res.code
+    //     // }
+    //     if(res.code) {
+    //       getToken({code: res.code}).then(res => {
+    //         console.log(res)
+    //       })
+    //     }
+    //   }
+    // })
   },
 
-  getDiaryList: function () {
-    const { pageNo, pageSize, diaryList } = this.data;
-    ajaxPost('/api/diary/getDiary', { pageNo: pageNo + 1, pageSize }).then(res => {
+  getDiaryList: function (extra) {
+    const { pageSize, diaryList } = this.data;
+    getDetailsList({ pageSize, ...extra }).then(res => {
       this.setData({
-        diaryList: diaryList.concat(res.itemList).map(item => {
+        diaryList: extra.pageNo === 1 ? res.itemList : diaryList.concat(res.itemList).map(item => {
           return {
             ...item,
             ...formatDiaryDate(item.date),
@@ -65,7 +90,7 @@ Page({
       return false;
     }
 
-    this.getDiaryList();
+    this.getDiaryList({pageNo: pageNo+1});
     setTimeout(function(){
       wx.stopPullDownRefresh();
     }, 1500)

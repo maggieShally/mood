@@ -1,13 +1,12 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"enhance": true,
-		"postcss": false,
+		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
@@ -27,9 +26,12 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.7",
-	"appid": "wxffcd8beefa67cdb3",
-	"projectname": "mood",
+	"libVersion": "2.8.3",
+	"appid": "wxb63d7cacfc32864d",
+	"projectname": "editor",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -42,29 +44,13 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "add",
-					"pathName": "pages/editDiary/editDiary",
-					"query": "id=26",
-					"scene": null
-				}
-			]
+			"list": []
 		}
 	}
 }

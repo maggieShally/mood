@@ -71,3 +71,8 @@
 .operate-sec .operate-item:first-child {
   border-right: 1px solid #ddd;
 }
+
+.rich-text {
+  word-break: break-all;
+  white-space: pre-wrap;
+}

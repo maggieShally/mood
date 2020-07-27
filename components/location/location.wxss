@@ -28,7 +28,7 @@
   margin-right: 0;
 }
 
-.weather-item image {
+.weather-item .image {
   width: 100%;
   height: 100%;
 }

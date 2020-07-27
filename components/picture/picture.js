@@ -34,7 +34,7 @@ Component({
             name: 'file',
             formData: {
               key: `giftCoverTest_${new Date().getTime()}.jpg`,
-              token: "c6x0I_KKeog34WZzUNtE73f3h96Jt6nUpcy37TPw:jxN39hq8aRpv_b8lP8X8SjkF98o=:eyJzY29wZSI6InRpcmFtaXN1LXFhIiwiZGVhZGxpbmUiOjE1Mzk4NDUxOTJ9",
+              token: "xxx",
             },
             success(res) {
               const data = res.data

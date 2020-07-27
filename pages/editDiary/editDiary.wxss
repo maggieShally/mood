@@ -1,4 +1,6 @@
 /* pages/editDiary/editDiary.wxss */
+/* @import "../../components/common/lib/weui.wxss"; */
+@import "../../components/editor/editor/editor.wxss";
 
 .edit-wrapper {
   padding: 30rpx;
@@ -18,7 +20,7 @@
 }
 
 .title-sec text {
-  flex: 80%;
+  flex: 70%;
 }
 
 .edit-content {
@@ -48,4 +50,10 @@
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
+}
+
+.editor {
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid #ddd;
 }

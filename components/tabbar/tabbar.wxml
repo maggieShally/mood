@@ -8,6 +8,6 @@
     <image style="width: 40rpx;height: 40rpx;" src="/public/images/more_unfold.png"></image>
   </view>
   <view class="tab-rigth">
-    <image style="width: 40rpx;height: 40rpx;" src="/public/images/edit.png"></image>
+    <image style="width: 40rpx;height: 40rpx;" src="/public/images/edit.png" bindtap="handleToAdd" />
   </view>
 </view>

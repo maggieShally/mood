@@ -11,7 +11,7 @@
   </view>
   <view class="content"> 
     <view class="detail">
-      <text class="info">{{item.content}}</text>
+      <rich-text class="info" nodes="{{item.content}}" />
       <text class="time">{{item.time}}</text>
     </view>
   </view>

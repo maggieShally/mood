@@ -1,7 +1,10 @@
 <!--components/diaryList/diaryList.wxml-->
-<view wx:for="{{itemlist}}" wx:key="{{index}}"  bindtap="redirectDetail" id="{{item.id}}">
-  <diary-item 
-    item="{{item}}"
-
-  ></diary-item>
+<view
+ wx:for="{{itemlist}}"
+ wx:key="id"
+ bindtap="redirectDetail"
+ id="{{item.id}}"
+>
+	<diary-item item="{{item}}" />
 </view>
+

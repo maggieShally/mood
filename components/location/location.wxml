@@ -11,7 +11,7 @@
         bindtap="getWeather"
         data-weather="{{item}}"
       >
-        <image src="/public/images/weather/{{activeWeather == item ? 'icon-'+item+'-active' : 'icon-'+item}}.png"></image>
+        <image class="image" src="/public/images/weather/{{activeWeather == item ? 'icon-'+item+'-active' : 'icon-'+item}}.png"></image>
       </view>
     </view>
   </view>

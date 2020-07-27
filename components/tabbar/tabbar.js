@@ -1,3 +1,5 @@
+// import { BMapWX } from "../../libs/bmap-wx"
+
 // components/tabbar.js
 Component({
   /**
@@ -18,6 +20,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    handleToAdd: function() {
+      wx.navigateTo({
+        url: '/pages/editDiary/editDiary'
+      })
+    }
 
   }
 })
